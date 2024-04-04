@@ -1,4 +1,3 @@
-
 {
     "builds": [{
         "src": "FacialExpressionYolo/main.py",
@@ -8,14 +7,7 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "FacialExpressionYolo/main.py"
+            "dest": "/"
         }
-    ],
-
-   "rewrites": [{
-         "source": "/(.*)",
-          "destination": "/" }
-    ] 
-
-
+    ]
 }
