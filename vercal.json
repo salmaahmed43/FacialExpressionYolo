@@ -10,5 +10,9 @@
             "src": "/(.*)",
             "dest": "FacialExpressionYolo/main.py"
         }
-    ]
+    ],
+    "rewrites": [
+        { "source": "/(.*)",
+            "destination": "/" }
+    ] 
 }
