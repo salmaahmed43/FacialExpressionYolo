@@ -1,5 +1,4 @@
 import json
-import cv2
 from PIL import Image
 from flask import Flask, request, jsonify
 from ultralytics import YOLO
@@ -39,12 +38,12 @@ def predict_yolo(image):
 @app.route('/predict', methods=['POST'])
 def predict():
     if 'image' not in request.files:
-        return jsonify({'error': 'No image provided.'}), 400
+        return jsonify({'error': 'No image provided.'})
 
     image = request.files['image']
 
     if image.filename == '':
-        return jsonify({'error': 'No image selected.'}), 400
+        return jsonify({'error': 'No image selected.'})
 
     if image:
         img_data = image.read()
