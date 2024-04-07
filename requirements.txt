@@ -11,6 +11,7 @@ filelock==3.13.3
 Flask==3.0.2
 fonttools==4.50.0
 fsspec==2024.3.1
+gunicorn==21.2.0
 idna==3.6
 image==1.5.33
 itsdangerous==2.1.2
