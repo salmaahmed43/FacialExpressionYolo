@@ -38,12 +38,12 @@ def predict_yolo(image):
 @app.route('/predict', methods=['POST'])
 def predict():
     if 'image' not in request.files:
-        return jsonify({'error': 'No image provided.'})
+        return jsonify({'error': 'No image provided.'}), 400
 
     image = request.files['image']
 
     if image.filename == '':
-        return jsonify({'error': 'No image selected.'})
+        return jsonify({'error': 'No image selected.'}), 400
 
     if image:
         img_data = image.read()
