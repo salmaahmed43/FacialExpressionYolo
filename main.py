@@ -34,6 +34,10 @@ def predict_yolo(image):
         return class_names_string
     except Exception as e:
         return  str(e)
+@app.route('/')
+def hellow_word():
+    return "hellow word"
+
 
 @app.route('/predict', methods=['POST', 'GET'])
 def predict():
