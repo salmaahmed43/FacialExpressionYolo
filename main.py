@@ -35,7 +35,7 @@ def predict_yolo(image):
     except Exception as e:
         return  str(e)
 
-@app.route('/predict', methods=['POST','HEAD'])
+@app.route('/predict', methods=['POST'])
 def predict():
     if 'image' not in request.files:
         return jsonify({'error': 'No image provided.'}), 400
