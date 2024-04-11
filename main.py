@@ -36,7 +36,7 @@ def predict_yolo(image):
         return  str(e)
 
 
-@app.route('/predict', methods=['POST'])
+@app.route('/', methods=['POST'])
 def predict():
     if request.method=='POST':
         if 'image' not in request.files:
