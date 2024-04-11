@@ -3,4 +3,3 @@ gunicorn==21.2.0
 image==1.5.33
 jsonify==0.5
 requests==2.31.0
-ultralytics==8.1.44
