@@ -1,37 +1,38 @@
 import json
 from PIL import Image
 from flask import Flask, request, jsonify
-from ultralytics import YOLO
+# from ultralytics import YOLO
 import io
 
 
 app = Flask(__name__)
-model = YOLO('FacialExpression.pt')
+# model = YOLO('FacialExpression.pt')
 
 def predict_yolo(image):
     try:
         # Perform YOLO prediction
-        results = model.predict(image)
-        # cv2.waitKey(0)
-        xx=results[0].tojson()
-        class_names_list = json.loads(xx)
+        # results = model.predict(image)
+        # # cv2.waitKey(0)
+        # xx=results[0].tojson()
+        # class_names_list = json.loads(xx)
 
-        # Extract only the names
-        class_names2 = [obj['name'] for obj in class_names_list]
-        #modify to handle output to count the objects
-        word_counts = {}
-        for word in class_names2:
-            if word in word_counts:
-                word_counts[word] += 1
-            else:
-                word_counts[word] = 1
+        # # Extract only the names
+        # class_names2 = [obj['name'] for obj in class_names_list]
+        # #modify to handle output to count the objects
+        # word_counts = {}
+        # for word in class_names2:
+        #     if word in word_counts:
+        #         word_counts[word] += 1
+        #     else:
+        #         word_counts[word] = 1
 
-        output = []
-        for word, count in word_counts.items():
-            output.append(f"{count} {word}")
+        # output = []
+        # for word, count in word_counts.items():
+        #     output.append(f"{count} {word}")
 
-        class_names_string = ' and '.join(output)
-        return class_names_string
+        # class_names_string = ' and '.join(output)
+        # return class_names_string
+        return "success"
     except Exception as e:
         return  str(e)
 
