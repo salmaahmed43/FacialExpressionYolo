@@ -36,7 +36,7 @@ def predict_yolo(image):
     except Exception as e:
         return  str(e)
 
-@app.route('/.')
+@app.route('/aa')
 def hello():
     return "hellow world"
 
