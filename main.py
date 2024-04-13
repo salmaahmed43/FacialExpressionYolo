@@ -36,6 +36,10 @@ def predict_yolo(image):
     except Exception as e:
         return  str(e)
 
+@app.route('/.')
+def hello():
+    return "hellow world"
+
 
 @app.route('/', methods=['POST'])
 def predict():
