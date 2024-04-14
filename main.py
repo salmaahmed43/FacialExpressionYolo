@@ -6,7 +6,7 @@ import io
 
 
 app = Flask(__name__)
-model = YOLO('FacialExpression.pt')
+# model = YOLO('FacialExpression.pt')
 
 def predict_yolo(image):
     try:
